@@ -125,7 +125,7 @@ def _second_lls_sum(zs_p1, lratio, gamma_p1=2.94, beta_m1=0.28, nterms=10):
 
 
 
-def calc_transmission(z_s,l_obs,model='full', nlines = 30, z_lls=None, lls_kwargs={}):
+def calc_transmission(z_s,l_obs,model='full', nlines = 30, z_lls=None):
     """ This function calculates the transmission function for a source at redshift 'z' for an observed wavelength array of l_obs.  
 
     'z_s': The redshift of the source object
@@ -136,10 +136,7 @@ def calc_transmission(z_s,l_obs,model='full', nlines = 30, z_lls=None, lls_kwarg
 
     'nlines': optional, int, default=30 (up to transition n=32). The number of lines in the lyman series to use.  Default is nlines=30, maximum is 39 (transition n=41).  We do not recommend having fewer than nlines<20, which agrees to within 1% with nlines=39.
 
-    'z_lls': optional, float.  If this is specified, it sets transmission to zero at z_lls instead of using the average absorption from contribution for lls.  
-
-    'lls_kwargs': optional, dict.  kwargs for tau_lc_lls.  Allows changes to nterms calculated (default is nterms=10) and the underlying distribution of LLS, n(z) = n0(1+z)**gamma and dn/dtau = A*tau**beta(1+z)**gamma. Defaults are from Songaila & Cowie (2010), with n0=0.15, beta=1.28, gamma=1.94.
-    
+    'z_lls': optional, float.  If this is specified, it sets transmission to zero at z_lls instead of using the average absorption from contribution for lls.     
 
     """
     
