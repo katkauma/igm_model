@@ -182,7 +182,7 @@ def calc_transmission(z_s,l_obs,model='full', nlines = 30, z_lls=None):
     #LLS absorption, calculate average unles z_lls is specified
     tau_lls = np.zeros_like(l_obs)
     if z_lls is None:
-        tau_lls[mask_lc] += tau_lc_lls(z_s,l_obs[mask_lc],**lls_kwargs)
+        tau_lls[mask_lc] += tau_lc_lls(z_s,l_obs[mask_lc])
     else:
         lls_mask = l_obs<(911.8*(1+z_lls))
         tau_lls[lls_mask] = np.inf
