@@ -9,7 +9,7 @@ calc_transmission(z_s, l_obs, nlines=30, z_lls=None)
   * n_lines: int, optional. is the number of transitions to inlcude in the lyman alpha forest.  Maximum number is 41, I don't recommend going below 20,
   * z_lls: float, optional.  If specified, this turns off the average LLS absorption and instead puts flux to zero at the location z_LLS.
 
-calc_tranmsission returns a transmission array of len(l_obs).
+calc_transmission returns a transmission array of len(l_obs).
 
 
 example.ipynb has example plots and usage.
