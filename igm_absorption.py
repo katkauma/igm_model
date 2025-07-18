@@ -1,5 +1,5 @@
 """
-Code to process and calculate IGM absorption using different models
+Code to process and calculate IGM absorption using model from Kauma et al. 2025 (in prep).
 """
 
 import numpy as np
