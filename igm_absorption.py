@@ -130,7 +130,7 @@ def calc_transmission(z_s,l_obs,model='full', nlines = 30, z_lls=None):
 
     'z_s': The redshift of the source object
 
-    'l_obs': Wavelength array to calculate transmission over
+    'l_obs': Wavelength array, in Angstroms, to calculate transmission over
 
     'model': default='full'.  Controls whether the full model (valid for all z) is used or the high-redshift (z>1.26) faster model is used.  both agree in the redshift range z>1.26.  The options are 'full', 'highz', or 'optimise'.  'optimise' automatically chooses the best function based on wavelength range.
 
